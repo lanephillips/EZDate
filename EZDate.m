@@ -490,4 +490,31 @@
     return [self.formatter stringFromDate:self];
 }
 
+#pragma mark - NSCopying and NSCoding
+
+-(id)copyWithZone:(NSZone *)zone
+{
+    // we're immutable, so just return ourselves
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _timeIntervalSinceReferenceDate = [aDecoder decodeDoubleForKey:@"timeIntervalSinceReferenceDate"];
+        _calId = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"calId"];
+        _timeZone = [aDecoder decodeObjectOfClass:[NSTimeZone class] forKey:@"timeZone"];
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    // this is all the information required to construct an equivalent EZDate
+    [aCoder encodeDouble:_timeIntervalSinceReferenceDate forKey:@"timeIntervalSinceReferenceDate"];
+    [aCoder encodeObject:_calId forKey:@"calId"];
+    [aCoder encodeObject:_timeZone forKey:@"timeZone"];
+}
+
 @end
