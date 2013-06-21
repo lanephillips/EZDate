@@ -29,6 +29,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZWednesday, EZThursday, EZFriday, EZSaturday };
+
 @interface EZDate : NSDate
 
 // the calendar used for date calculations
@@ -85,6 +87,11 @@
 // what you really wanted
 + (id)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 + (id)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
+// e.g. first Wednesday of the month
++ (id)dateWithYear:(NSInteger)year month:(NSInteger)month ordinal:(NSInteger)ordinal weekday:(NSInteger)weekday;
+
+- (id)dateByAddingYears:(NSInteger)years months:(NSInteger)months days:(NSInteger)days;
+- (id)dateByAddingHours:(NSInteger)hours minutes:(NSInteger)minutes seconds:(NSInteger)seconds;
 
 // overridden to return EZDate
 - (id)dateByAddingTimeInterval:(NSTimeInterval)ti;
@@ -93,10 +100,27 @@
 - (NSString *)description;
 
 // date at next occurrence after the receiver, useful for setting alarms not in the past
-- (id)dateAtNextOccurrenceOfMonth:(int)month day:(int)day;
-- (id)dateAtNextOccurrenceOfHour:(int)hour minute:(int)minute;
+- (id)dateAtNextOccurrenceOfWeekday:(NSInteger)weekday;
+- (id)dateAtNextOccurrenceOfMonth:(NSInteger)month day:(NSInteger)day;
+- (id)dateAtNextOccurrenceOfHour:(NSInteger)hour minute:(NSInteger)minute;
 
-// TODO: enumerators for various calendar applications
+// enumerators for various calendar applications, basically every repeat option offered by Google Calendar
+// the argument to the first block call is the receiver
+// set stop to YES to exit enumeration
+- (void)repeatEvery:(NSInteger)days daysEndingAt:(NSDate*)end usingBlock:(void(^)(EZDate* date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)days daysEndingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void(^)(EZDate* date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)weeks weeksOnWeekdays:(EZWeekdayMask)mask endingAt:(NSDate*)end usingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)weeks weeksOnWeekdays:(EZWeekdayMask)mask endingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)months monthsEndingAt:(NSDate*)end usingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)months monthsEndingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatOrdinalEvery:(NSInteger)months monthsEndingAt:(NSDate*)end usingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatOrdinalEvery:(NSInteger)months monthsEndingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)years yearsEndingAt:(NSDate*)end usingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+- (void)repeatEvery:(NSInteger)years yearsEndingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void (^)(EZDate *date, BOOL *stop))block;
+
+// what implements most of the above
+- (void)repeatByAddingComponents:(NSDateComponents*)comps endingAt:(NSDate*)end usingBlock:(void(^)(EZDate* date, BOOL *stop))block;
+- (void)repeatByAddingComponents:(NSDateComponents*)comps endingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void(^)(EZDate* date, BOOL *stop))block;
 
 // suscript with a format string to get the formatted date string, e.g. NSString* formatted = aDate[@"yyyy-MM-dd"];
 - (id)objectForKeyedSubscript:(id)key;
