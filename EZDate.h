@@ -33,6 +33,9 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 
 @interface EZDate : NSDate
 
+// this is what makes us an NSDate
+@property (nonatomic,readonly) NSTimeInterval timeIntervalSinceReferenceDate;
+
 // the calendar used for date calculations
 @property (nonatomic,readonly) NSCalendar* calendar;
 // the timezone
@@ -81,7 +84,6 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 - (id)initWithNSDate:(NSDate*)date;
 
 + (id)dateWithNSDate:(NSDate*)date calendarIdentifier:(NSString*)calendar timeZone:(NSTimeZone*)tz;
-// the designated initializer
 - (id)initWithNSDate:(NSDate*)date calendarIdentifier:(NSString*)calendar timeZone:(NSTimeZone*)tz;
 
 // what you really wanted

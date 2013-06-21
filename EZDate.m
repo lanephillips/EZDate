@@ -32,7 +32,6 @@
 @interface EZDate ()
 {
     // backing for readonly properties
-    NSDate* _NSDate;
     NSCalendar* _calendar;
     NSTimeZone* _timeZone;
 }
@@ -97,7 +96,7 @@
                               NSWeekOfMonthCalendarUnit |
                               NSWeekOfYearCalendarUnit |
                               NSYearForWeekOfYearCalendarUnit)
-                  fromDate:_NSDate];
+                  fromDate:self];
     }
     return _comps;
 }
@@ -133,7 +132,6 @@
 
 - (id)init { return [super init]; }
 - (id)initWithTimeIntervalSinceNow:(NSTimeInterval)secs { return [super initWithTimeIntervalSinceNow:secs]; }
-- (id)initWithTimeIntervalSinceReferenceDate:(NSTimeInterval)secsToBeAdded { return [super initWithTimeIntervalSinceReferenceDate:secsToBeAdded]; }
 - (id)initWithTimeIntervalSince1970:(NSTimeInterval)ti { return [super initWithTimeIntervalSince1970:ti]; }
 - (id)initWithTimeInterval:(NSTimeInterval)secsToBeAdded sinceDate:(NSDate *)anotherDate { return [super initWithTimeInterval:secsToBeAdded sinceDate:anotherDate]; }
 
@@ -151,6 +149,17 @@
     if (self) {
         _calId = calendar;
         _timeZone = tz;
+    }
+    return self;
+}
+
+// required for NSDate subclasses
+// this is where all the init calls eventually end up
+- (id)initWithTimeIntervalSinceReferenceDate:(NSTimeInterval)secsToBeAdded
+{
+    self = [super init];
+    if (self) {
+        _timeIntervalSinceReferenceDate = secsToBeAdded;
     }
     return self;
 }
