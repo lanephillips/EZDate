@@ -31,7 +31,7 @@
 
 typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZWednesday, EZThursday, EZFriday, EZSaturday };
 
-@interface EZDate : NSDate
+@interface EZDate : NSDate <NSMutableCopying>
 {
     @protected
     // backing for readonly properties

@@ -28,6 +28,7 @@
 //
 
 #import "EZDate.h"
+#import "EZMutableDate.h"
 
 @interface EZDate ()
 
@@ -506,6 +507,11 @@
     [aCoder encodeDouble:_timeIntervalSinceReferenceDate forKey:@"timeIntervalSinceReferenceDate"];
     [aCoder encodeObject:_calId forKey:@"calId"];
     [aCoder encodeObject:_timeZone forKey:@"timeZone"];
+}
+
+-(id)mutableCopyWithZone:(NSZone *)zone
+{
+    return [[EZMutableDate allocWithZone:zone] initWithNSDate:self calendarIdentifier:_calId timeZone:_timeZone];
 }
 
 @end
