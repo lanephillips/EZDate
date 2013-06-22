@@ -30,15 +30,6 @@
 #import "EZDate.h"
 
 @interface EZDate ()
-{
-    // backing for readonly properties
-    NSCalendar* _calendar;
-    NSTimeZone* _timeZone;
-}
-
-@property (nonatomic) NSString* calId;
-@property (nonatomic) NSDateFormatter* formatter;
-@property (nonatomic) NSDateComponents* comps;
 
 @end
 

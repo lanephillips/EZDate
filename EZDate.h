@@ -32,6 +32,16 @@
 typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZWednesday, EZThursday, EZFriday, EZSaturday };
 
 @interface EZDate : NSDate
+{
+    @protected
+    // backing for readonly properties
+    NSTimeInterval _timeIntervalSinceReferenceDate;
+    NSCalendar* _calendar;
+    NSTimeZone* _timeZone;
+    NSString* _calId;
+    NSDateFormatter* _formatter;
+    NSDateComponents* _comps;
+}
 
 // this is what makes us an NSDate
 @property (nonatomic,readonly) NSTimeInterval timeIntervalSinceReferenceDate;
@@ -124,9 +134,15 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 - (void)repeatByAddingComponents:(NSDateComponents*)comps endingAt:(NSDate*)end usingBlock:(void(^)(EZDate* date, BOOL *stop))block;
 - (void)repeatByAddingComponents:(NSDateComponents*)comps endingAfter:(NSInteger)occurrences occurrencesUsingBlock:(void(^)(EZDate* date, BOOL *stop))block;
 
-// suscript with a format string to get the formatted date string, e.g. NSString* formatted = aDate[@"yyyy-MM-dd"];
+// subscript with a format string to get the formatted date string, e.g. NSString* formatted = aDate[@"yyyy-MM-dd"];
 - (id)objectForKeyedSubscript:(id)key;
 // if you think that's a hack you can use this
 - (NSString*)stringWithDateFormat:(NSString*)format;
+
+// these properties aren't really meant to be used by other code
+// they're here for the EZMutableDate subclass
+@property (nonatomic) NSString* calId;
+@property (nonatomic) NSDateFormatter* formatter;
+@property (nonatomic) NSDateComponents* comps;
 
 @end
