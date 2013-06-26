@@ -99,6 +99,8 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 // what you really wanted
 + (id)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 + (id)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
+// HMS today
++ (id)dateWithHour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
 // e.g. first Wednesday of the month
 + (id)dateWithYear:(NSInteger)year month:(NSInteger)month ordinal:(NSInteger)ordinal weekday:(NSInteger)weekday;
 
@@ -138,6 +140,16 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 - (id)objectForKeyedSubscript:(id)key;
 // if you think that's a hack you can use this
 - (NSString*)stringWithDateFormat:(NSString*)format;
+
+// get a nice-looking date or time string suitable for an email or RSS app
+// returns time if today, month an day if within the last year,
+// full date if in the future or more than a year ago
+- (NSString*)prettyString;
+
+// return a human-friendly elapsed time similar to the Twitter app
+// e.g 4m, 6h, 23d, 1y
+// positive value regardless of future or past
+- (NSString*)prettyElapsedTimeString;
 
 // these properties aren't really meant to be used by other code
 // they're here for the EZMutableDate subclass

@@ -177,6 +177,13 @@
     return [self dateWithNSDate:[cal dateFromComponents:comps]];
 }
 
++(id)dateWithHour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second
+{
+    EZDate* d = [EZDate date];
+    return [self dateWithYear:d.year month:d.month day:d.day
+                         hour:hour minute:minute second:second];
+}
+
 +(id)dateWithYear:(NSInteger)year month:(NSInteger)month ordinal:(NSInteger)ordinal weekday:(NSInteger)weekday
 {
     NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -480,6 +487,67 @@
 {
     self.formatter.dateFormat = format;
     return [self.formatter stringFromDate:self];
+}
+
+-(NSString *)prettyString
+{
+    // key dates: midnight this morning
+    EZDate* midnight = [EZDate dateWithHour:0 minute:0 second:0];
+    NSLog(@"midnight: %@", midnight);
+    
+    // midnight tonight
+    EZDate* tomorrow = [midnight dateByAddingYears:0 months:0 days:1];
+    
+    // first of this month
+    EZDate* first = [EZDate dateWithYear:midnight.year month:midnight.month day:1];
+    NSLog(@"first: %@", first);
+    
+    // first of next month, last year
+    EZDate* fnmly = [first dateByAddingYears:-1 months:1 days:0];
+    NSLog(@"fnmly: %@", fnmly);
+    
+    if ([midnight compare:self] != NSOrderedDescending &&
+        [self compare:tomorrow] == NSOrderedAscending) {
+        // date is today, return just the time
+        return [NSDateFormatter localizedStringFromDate:self
+                                              dateStyle:NSDateFormatterNoStyle
+                                              timeStyle:NSDateFormatterShortStyle];
+    }
+    
+    if ([self compare:fnmly] == NSOrderedAscending ||
+        [tomorrow compare:self] != NSOrderedDescending) {
+        // date is in future or more than a year ago, return full date
+        return [NSDateFormatter localizedStringFromDate:self
+                                              dateStyle:NSDateFormatterShortStyle
+                                              timeStyle:NSDateFormatterNoStyle];
+    }
+    
+    
+    // date more recent than this month last year, return month day
+    return [self stringWithDateFormat: @"MMM d"];
+}
+
+-(NSString *)prettyElapsedTimeString
+{
+    NSDate* now = [NSDate date];
+    NSDateComponents* c = [self.calendar components:NSYearCalendarUnit|NSDayCalendarUnit|
+                           NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit
+                                           fromDate:[self earlierDate:now]
+                                             toDate:[self laterDate:now]
+                                            options:0];
+    
+    // just return the value for the biggest unit
+    if (c.year)
+        return [NSString stringWithFormat:@"%dy", c.year];
+    // don't do months, because 'm' would be confused with minutes
+    // (Twitter actually switches to full dates at some point)
+    if (c.day)
+        return [NSString stringWithFormat:@"%dd", c.day];
+    if (c.hour)
+        return [NSString stringWithFormat:@"%dh", c.hour];
+    if (c.minute)
+        return [NSString stringWithFormat:@"%ds", c.minute];
+    return [NSString stringWithFormat:@"%dy", c.second];
 }
 
 #pragma mark - NSCopying and NSCoding
