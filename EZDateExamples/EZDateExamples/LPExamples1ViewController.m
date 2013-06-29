@@ -11,7 +11,8 @@
 
 @interface LPExamples1ViewController ()
 
-@property (nonatomic) NSArray* examples;
+@property (nonatomic) NSArray* codes;
+@property (nonatomic) NSArray* results;
 
 @end
 
@@ -21,8 +22,12 @@
 {
     [super viewDidLoad];
 
-    self.examples = @[[NSString stringWithFormat:@"Today's date is: %@", [EZDate date]]
-                      ];
+    _codes = @[
+                   @"[EZDate date]"
+                   ];
+    _results = @[
+                     [EZDate date]
+                     ];
 }
 
 #pragma mark - Table view data source
@@ -34,7 +39,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _examples.count;
+    return _codes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -42,7 +47,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = _examples[indexPath.row];
+    cell.textLabel.text = [_results[indexPath.row] description];
+    cell.detailTextLabel.text = _codes[indexPath.row];
     
     return cell;
 }

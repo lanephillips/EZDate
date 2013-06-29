@@ -486,6 +486,7 @@
 - (NSString*)stringWithDateFormat:(NSString*)format
 {
     self.formatter.dateFormat = format;
+    self.formatter.calendar = self.calendar;
     return [self.formatter stringFromDate:self];
 }
 
