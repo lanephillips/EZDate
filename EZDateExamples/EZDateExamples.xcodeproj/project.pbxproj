@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6A0B9AB177F2FE000A98B3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0B9AA177F2FE000A98B3E /* UIKit.framework */; };
+		A6A0B9AD177F2FE000A98B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0B9AC177F2FE000A98B3E /* Foundation.framework */; };
+		A6A0B9AF177F2FE000A98B3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A0B9AE177F2FE000A98B3E /* CoreGraphics.framework */; };
+		A6A0B9B5177F2FE000A98B3E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9B3177F2FE000A98B3E /* InfoPlist.strings */; };
+		A6A0B9B7177F2FE000A98B3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9B6177F2FE000A98B3E /* main.m */; };
+		A6A0B9BB177F2FE000A98B3E /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9BA177F2FE000A98B3E /* LPAppDelegate.m */; };
+		A6A0B9BD177F2FE000A98B3E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9BC177F2FE000A98B3E /* Default.png */; };
+		A6A0B9BF177F2FE000A98B3E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9BE177F2FE000A98B3E /* Default@2x.png */; };
+		A6A0B9C1177F2FE000A98B3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9C0177F2FE000A98B3E /* Default-568h@2x.png */; };
+		A6A0B9C4177F2FE000A98B3E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9C2177F2FE000A98B3E /* MainStoryboard.storyboard */; };
+		A6A0B9C9177F2FE000A98B3E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9C8177F2FE000A98B3E /* first.png */; };
+		A6A0B9CB177F2FE000A98B3E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9CA177F2FE000A98B3E /* first@2x.png */; };
+		A6A0B9D0177F2FE000A98B3E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9CF177F2FE000A98B3E /* second.png */; };
+		A6A0B9D2177F2FE000A98B3E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9D1177F2FE000A98B3E /* second@2x.png */; };
+		A6A0B9DA177F30B500A98B3E /* LPExamples1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9D9177F30B500A98B3E /* LPExamples1ViewController.m */; };
+		A6A0B9E0177F316800A98B3E /* EZDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9DD177F316800A98B3E /* EZDate.m */; };
+		A6A0B9E1177F316800A98B3E /* EZMutableDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9DF177F316800A98B3E /* EZMutableDate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A6A0B9A7177F2FE000A98B3E /* EZDateExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZDateExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6A0B9AA177F2FE000A98B3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6A0B9AC177F2FE000A98B3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A6A0B9AE177F2FE000A98B3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A6A0B9B2177F2FE000A98B3E /* EZDateExamples-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZDateExamples-Info.plist"; sourceTree = "<group>"; };
+		A6A0B9B4177F2FE000A98B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A6A0B9B6177F2FE000A98B3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6A0B9B8177F2FE000A98B3E /* EZDateExamples-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZDateExamples-Prefix.pch"; sourceTree = "<group>"; };
+		A6A0B9B9177F2FE000A98B3E /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
+		A6A0B9BA177F2FE000A98B3E /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
+		A6A0B9BC177F2FE000A98B3E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A6A0B9BE177F2FE000A98B3E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A6A0B9C0177F2FE000A98B3E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A6A0B9C3177F2FE000A98B3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A6A0B9C8177F2FE000A98B3E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		A6A0B9CA177F2FE000A98B3E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		A6A0B9CF177F2FE000A98B3E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		A6A0B9D1177F2FE000A98B3E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		A6A0B9D8177F30B500A98B3E /* LPExamples1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPExamples1ViewController.h; sourceTree = "<group>"; };
+		A6A0B9D9177F30B500A98B3E /* LPExamples1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPExamples1ViewController.m; sourceTree = "<group>"; };
+		A6A0B9DC177F316800A98B3E /* EZDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZDate.h; sourceTree = "<group>"; };
+		A6A0B9DD177F316800A98B3E /* EZDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZDate.m; sourceTree = "<group>"; };
+		A6A0B9DE177F316800A98B3E /* EZMutableDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZMutableDate.h; sourceTree = "<group>"; };
+		A6A0B9DF177F316800A98B3E /* EZMutableDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZMutableDate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6A0B9A4177F2FE000A98B3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A0B9AB177F2FE000A98B3E /* UIKit.framework in Frameworks */,
+				A6A0B9AD177F2FE000A98B3E /* Foundation.framework in Frameworks */,
+				A6A0B9AF177F2FE000A98B3E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6A0B99E177F2FE000A98B3E = {
+			isa = PBXGroup;
+			children = (
+				A6A0B9B0177F2FE000A98B3E /* EZDateExamples */,
+				A6A0B9A9177F2FE000A98B3E /* Frameworks */,
+				A6A0B9A8177F2FE000A98B3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6A0B9A8177F2FE000A98B3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6A0B9A7177F2FE000A98B3E /* EZDateExamples.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6A0B9A9177F2FE000A98B3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6A0B9AA177F2FE000A98B3E /* UIKit.framework */,
+				A6A0B9AC177F2FE000A98B3E /* Foundation.framework */,
+				A6A0B9AE177F2FE000A98B3E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6A0B9B0177F2FE000A98B3E /* EZDateExamples */ = {
+			isa = PBXGroup;
+			children = (
+				A6A0B9B9177F2FE000A98B3E /* LPAppDelegate.h */,
+				A6A0B9BA177F2FE000A98B3E /* LPAppDelegate.m */,
+				A6A0B9D8177F30B500A98B3E /* LPExamples1ViewController.h */,
+				A6A0B9D9177F30B500A98B3E /* LPExamples1ViewController.m */,
+				A6A0B9C2177F2FE000A98B3E /* MainStoryboard.storyboard */,
+				A6A0B9C8177F2FE000A98B3E /* first.png */,
+				A6A0B9CA177F2FE000A98B3E /* first@2x.png */,
+				A6A0B9CF177F2FE000A98B3E /* second.png */,
+				A6A0B9D1177F2FE000A98B3E /* second@2x.png */,
+				A6A0B9DB177F316800A98B3E /* EZDate */,
+				A6A0B9B1177F2FE000A98B3E /* Supporting Files */,
+			);
+			path = EZDateExamples;
+			sourceTree = "<group>";
+		};
+		A6A0B9B1177F2FE000A98B3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6A0B9B2177F2FE000A98B3E /* EZDateExamples-Info.plist */,
+				A6A0B9B3177F2FE000A98B3E /* InfoPlist.strings */,
+				A6A0B9B6177F2FE000A98B3E /* main.m */,
+				A6A0B9B8177F2FE000A98B3E /* EZDateExamples-Prefix.pch */,
+				A6A0B9BC177F2FE000A98B3E /* Default.png */,
+				A6A0B9BE177F2FE000A98B3E /* Default@2x.png */,
+				A6A0B9C0177F2FE000A98B3E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6A0B9DB177F316800A98B3E /* EZDate */ = {
+			isa = PBXGroup;
+			children = (
+				A6A0B9DC177F316800A98B3E /* EZDate.h */,
+				A6A0B9DD177F316800A98B3E /* EZDate.m */,
+				A6A0B9DE177F316800A98B3E /* EZMutableDate.h */,
+				A6A0B9DF177F316800A98B3E /* EZMutableDate.m */,
+			);
+			name = EZDate;
+			path = ../../EZDate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6A0B9A6177F2FE000A98B3E /* EZDateExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6A0B9D5177F2FE000A98B3E /* Build configuration list for PBXNativeTarget "EZDateExamples" */;
+			buildPhases = (
+				A6A0B9A3177F2FE000A98B3E /* Sources */,
+				A6A0B9A4177F2FE000A98B3E /* Frameworks */,
+				A6A0B9A5177F2FE000A98B3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EZDateExamples;
+			productName = EZDateExamples;
+			productReference = A6A0B9A7177F2FE000A98B3E /* EZDateExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6A0B99F177F2FE000A98B3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LP;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Milk LLC";
+			};
+			buildConfigurationList = A6A0B9A2177F2FE000A98B3E /* Build configuration list for PBXProject "EZDateExamples" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A6A0B99E177F2FE000A98B3E;
+			productRefGroup = A6A0B9A8177F2FE000A98B3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6A0B9A6177F2FE000A98B3E /* EZDateExamples */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6A0B9A5177F2FE000A98B3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A0B9B5177F2FE000A98B3E /* InfoPlist.strings in Resources */,
+				A6A0B9BD177F2FE000A98B3E /* Default.png in Resources */,
+				A6A0B9BF177F2FE000A98B3E /* Default@2x.png in Resources */,
+				A6A0B9C1177F2FE000A98B3E /* Default-568h@2x.png in Resources */,
+				A6A0B9C4177F2FE000A98B3E /* MainStoryboard.storyboard in Resources */,
+				A6A0B9C9177F2FE000A98B3E /* first.png in Resources */,
+				A6A0B9CB177F2FE000A98B3E /* first@2x.png in Resources */,
+				A6A0B9D0177F2FE000A98B3E /* second.png in Resources */,
+				A6A0B9D2177F2FE000A98B3E /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6A0B9A3177F2FE000A98B3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A0B9B7177F2FE000A98B3E /* main.m in Sources */,
+				A6A0B9BB177F2FE000A98B3E /* LPAppDelegate.m in Sources */,
+				A6A0B9DA177F30B500A98B3E /* LPExamples1ViewController.m in Sources */,
+				A6A0B9E0177F316800A98B3E /* EZDate.m in Sources */,
+				A6A0B9E1177F316800A98B3E /* EZMutableDate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6A0B9B3177F2FE000A98B3E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6A0B9B4177F2FE000A98B3E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A6A0B9C2177F2FE000A98B3E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6A0B9C3177F2FE000A98B3E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6A0B9D3177F2FE000A98B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6A0B9D4177F2FE000A98B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6A0B9D6177F2FE000A98B3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZDateExamples/EZDateExamples-Prefix.pch";
+				INFOPLIST_FILE = "EZDateExamples/EZDateExamples-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A6A0B9D7177F2FE000A98B3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EZDateExamples/EZDateExamples-Prefix.pch";
+				INFOPLIST_FILE = "EZDateExamples/EZDateExamples-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6A0B9A2177F2FE000A98B3E /* Build configuration list for PBXProject "EZDateExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6A0B9D3177F2FE000A98B3E /* Debug */,
+				A6A0B9D4177F2FE000A98B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6A0B9D5177F2FE000A98B3E /* Build configuration list for PBXNativeTarget "EZDateExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6A0B9D6177F2FE000A98B3E /* Debug */,
+				A6A0B9D7177F2FE000A98B3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6A0B99F177F2FE000A98B3E /* Project object */;
+}

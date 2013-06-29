@@ -122,7 +122,7 @@
 + (id)distantFuture { return [self dateWithNSDate:[NSDate distantFuture]]; }
 + (id)distantPast { return [self dateWithNSDate:[NSDate distantPast]]; }
 
-- (id)init { return [super init]; }
+- (id)init { return [self initWithTimeIntervalSinceReferenceDate:[NSDate timeIntervalSinceReferenceDate]]; }
 - (id)initWithTimeIntervalSinceNow:(NSTimeInterval)secs { return [super initWithTimeIntervalSinceNow:secs]; }
 - (id)initWithTimeIntervalSince1970:(NSTimeInterval)ti { return [super initWithTimeIntervalSince1970:ti]; }
 - (id)initWithTimeInterval:(NSTimeInterval)secsToBeAdded sinceDate:(NSDate *)anotherDate { return [super initWithTimeInterval:secsToBeAdded sinceDate:anotherDate]; }
