@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Examples1 View Controller - Item-->
+        <!--Examples1 View Controller - EZDate-->
         <scene sceneID="PxN-UB-Sti">
             <objects>
                 <tableViewController id="SfV-rt-Dho" customClass="LPExamples1ViewController" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                             <outlet property="delegate" destination="SfV-rt-Dho" id="yOy-It-NYf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="zck-XW-qLD"/>
+                    <tabBarItem key="tabBarItem" title="EZDate" id="zck-XW-qLD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ju-rz-FLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
