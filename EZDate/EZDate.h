@@ -29,7 +29,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZWednesday, EZThursday, EZFriday, EZSaturday };
+typedef NS_OPTIONS(NSInteger, EZWeekdayMask)
+{
+    EZSunday,
+    EZMonday,
+    EZTuesday,
+    EZWednesday,
+    EZThursday,
+    EZFriday,
+    EZSaturday
+};
 
 @interface EZDate : NSDate <NSMutableCopying>
 {

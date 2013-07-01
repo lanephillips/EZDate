@@ -25,6 +25,8 @@
 		A6A0B9E0177F316800A98B3E /* EZDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9DD177F316800A98B3E /* EZDate.m */; };
 		A6A0B9E1177F316800A98B3E /* EZMutableDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9DF177F316800A98B3E /* EZMutableDate.m */; };
 		A6A0B9E41781DACA00A98B3E /* LPExamples2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9E31781DAC900A98B3E /* LPExamples2ViewController.m */; };
+		A6A0B9E91781E7FC00A98B3E /* LPRepeatExamplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9E81781E7FC00A98B3E /* LPRepeatExamplesViewController.m */; };
+		A6A0B9EB1782140500A98B3E /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A0B9EA1782140500A98B3E /* black.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		A6A0B9DF177F316800A98B3E /* EZMutableDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZMutableDate.m; sourceTree = "<group>"; };
 		A6A0B9E21781D92800A98B3E /* LPExamples2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPExamples2ViewController.h; sourceTree = "<group>"; };
 		A6A0B9E31781DAC900A98B3E /* LPExamples2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPExamples2ViewController.m; sourceTree = "<group>"; };
+		A6A0B9E71781E7FB00A98B3E /* LPRepeatExamplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPRepeatExamplesViewController.h; sourceTree = "<group>"; };
+		A6A0B9E81781E7FC00A98B3E /* LPRepeatExamplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPRepeatExamplesViewController.m; sourceTree = "<group>"; };
+		A6A0B9EA1782140500A98B3E /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +111,14 @@
 				A6A0B9D9177F30B500A98B3E /* LPExamples1ViewController.m */,
 				A6A0B9E21781D92800A98B3E /* LPExamples2ViewController.h */,
 				A6A0B9E31781DAC900A98B3E /* LPExamples2ViewController.m */,
+				A6A0B9E71781E7FB00A98B3E /* LPRepeatExamplesViewController.h */,
+				A6A0B9E81781E7FC00A98B3E /* LPRepeatExamplesViewController.m */,
 				A6A0B9C2177F2FE000A98B3E /* MainStoryboard.storyboard */,
 				A6A0B9C8177F2FE000A98B3E /* first.png */,
 				A6A0B9CA177F2FE000A98B3E /* first@2x.png */,
 				A6A0B9CF177F2FE000A98B3E /* second.png */,
 				A6A0B9D1177F2FE000A98B3E /* second@2x.png */,
+				A6A0B9EA1782140500A98B3E /* black.png */,
 				A6A0B9DB177F316800A98B3E /* EZDate */,
 				A6A0B9B1177F2FE000A98B3E /* Supporting Files */,
 			);
@@ -204,6 +212,7 @@
 				A6A0B9CB177F2FE000A98B3E /* first@2x.png in Resources */,
 				A6A0B9D0177F2FE000A98B3E /* second.png in Resources */,
 				A6A0B9D2177F2FE000A98B3E /* second@2x.png in Resources */,
+				A6A0B9EB1782140500A98B3E /* black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +229,7 @@
 				A6A0B9E0177F316800A98B3E /* EZDate.m in Sources */,
 				A6A0B9E1177F316800A98B3E /* EZMutableDate.m in Sources */,
 				A6A0B9E41781DACA00A98B3E /* LPExamples2ViewController.m in Sources */,
+				A6A0B9E91781E7FC00A98B3E /* LPRepeatExamplesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

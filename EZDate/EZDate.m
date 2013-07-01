@@ -304,6 +304,7 @@
     [self repeatByAddingComponents:c endingAfter:occurrences occurrencesUsingBlock:block];
 }
 
+// TODO: not sure if these are working
 - (void)repeatEvery:(NSInteger)weeks weeksOnWeekdays:(EZWeekdayMask)mask endingAt:(NSDate*)end usingBlock:(void (^)(EZDate *date, BOOL *stop))block
 {
     // start on Sunday this week, our block will filter out the earlier dates
