@@ -16,13 +16,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="SfV-rt-Dho" kind="relationship" relationship="viewControllers" id="rei-nk-Dpd"/>
+                        <segue destination="uvq-vX-7ah" kind="relationship" relationship="viewControllers" id="hKK-o5-Wom"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Examples1 View Controller - EZDate-->
+        <!--Examples1 View Controller - Initialization-->
         <scene sceneID="PxN-UB-Sti">
             <objects>
                 <tableViewController id="SfV-rt-Dho" customClass="LPExamples1ViewController" sceneMemberID="viewController">
@@ -58,18 +59,59 @@
                             <outlet property="delegate" destination="SfV-rt-Dho" id="yOy-It-NYf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="EZDate" id="zck-XW-qLD"/>
+                    <tabBarItem key="tabBarItem" title="Initialization" id="zck-XW-qLD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ju-rz-FLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="625" y="180"/>
         </scene>
+        <!--Examples2 View Controller - Properties and Format-->
+        <scene sceneID="R5C-4A-5oU">
+            <objects>
+                <tableViewController id="uvq-vX-7ah" customClass="LPExamples2ViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kvf-pf-0Bz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="36p-Vn-aPb" detailTextLabel="EFp-76-Jbu" style="IBUITableViewCellStyleSubtitle" id="cvD-QP-JVd">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="36p-Vn-aPb">
+                                            <rect key="frame" x="10" y="2" width="38" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="EFp-76-Jbu">
+                                            <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uvq-vX-7ah" id="H5i-Tm-xoy"/>
+                            <outlet property="delegate" destination="uvq-vX-7ah" id="uGl-P0-7Wa"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Properties and Format" id="jr4-vO-sGS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIt-Ky-b9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="849"/>
+        </scene>
     </scenes>
-    <classes>
-        <class className="LPExamples1ViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPExamples1ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

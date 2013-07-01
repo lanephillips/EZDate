@@ -24,6 +24,7 @@
 		A6A0B9DA177F30B500A98B3E /* LPExamples1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9D9177F30B500A98B3E /* LPExamples1ViewController.m */; };
 		A6A0B9E0177F316800A98B3E /* EZDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9DD177F316800A98B3E /* EZDate.m */; };
 		A6A0B9E1177F316800A98B3E /* EZMutableDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9DF177F316800A98B3E /* EZMutableDate.m */; };
+		A6A0B9E41781DACA00A98B3E /* LPExamples2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B9E31781DAC900A98B3E /* LPExamples2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		A6A0B9DD177F316800A98B3E /* EZDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZDate.m; sourceTree = "<group>"; };
 		A6A0B9DE177F316800A98B3E /* EZMutableDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EZMutableDate.h; sourceTree = "<group>"; };
 		A6A0B9DF177F316800A98B3E /* EZMutableDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EZMutableDate.m; sourceTree = "<group>"; };
+		A6A0B9E21781D92800A98B3E /* LPExamples2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPExamples2ViewController.h; sourceTree = "<group>"; };
+		A6A0B9E31781DAC900A98B3E /* LPExamples2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPExamples2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				A6A0B9BA177F2FE000A98B3E /* LPAppDelegate.m */,
 				A6A0B9D8177F30B500A98B3E /* LPExamples1ViewController.h */,
 				A6A0B9D9177F30B500A98B3E /* LPExamples1ViewController.m */,
+				A6A0B9E21781D92800A98B3E /* LPExamples2ViewController.h */,
+				A6A0B9E31781DAC900A98B3E /* LPExamples2ViewController.m */,
 				A6A0B9C2177F2FE000A98B3E /* MainStoryboard.storyboard */,
 				A6A0B9C8177F2FE000A98B3E /* first.png */,
 				A6A0B9CA177F2FE000A98B3E /* first@2x.png */,
@@ -214,6 +219,7 @@
 				A6A0B9DA177F30B500A98B3E /* LPExamples1ViewController.m in Sources */,
 				A6A0B9E0177F316800A98B3E /* EZDate.m in Sources */,
 				A6A0B9E1177F316800A98B3E /* EZMutableDate.m in Sources */,
+				A6A0B9E41781DACA00A98B3E /* LPExamples2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
