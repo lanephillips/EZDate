@@ -84,7 +84,7 @@
                               NSWeekCalendarUnit |
                               NSWeekdayCalendarUnit |
                               NSWeekdayOrdinalCalendarUnit |
-                              NSQuarterCalendarUnit |
+                              // Apple bug: NSQuarterCalendarUnit |
                               NSWeekOfMonthCalendarUnit |
                               NSWeekOfYearCalendarUnit |
                               NSYearForWeekOfYearCalendarUnit)
@@ -106,7 +106,7 @@
 -(NSInteger)week              { return self.comps.week;              }
 -(NSInteger)weekday           { return self.comps.weekday;           }
 -(NSInteger)weekdayOrdinal    { return self.comps.weekdayOrdinal;    }
--(NSInteger)quarter           { return self.comps.quarter;           }
+// Apple bug: -(NSInteger)quarter           { return self.comps.quarter;           }
 -(NSInteger)weekOfMonth       { return self.comps.weekOfMonth;       }
 -(NSInteger)weekOfYear        { return self.comps.weekOfYear;        }
 -(NSInteger)yearForWeekOfYear { return self.comps.yearForWeekOfYear; }

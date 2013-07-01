@@ -67,7 +67,7 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 @property (nonatomic,readonly) NSInteger week;
 @property (nonatomic,readonly) NSInteger weekday;
 @property (nonatomic,readonly) NSInteger weekdayOrdinal;
-@property (nonatomic,readonly) NSInteger quarter;
+// Apple bug: @property (nonatomic,readonly) NSInteger quarter;
 @property (nonatomic,readonly) NSInteger weekOfMonth;
 @property (nonatomic,readonly) NSInteger weekOfYear;
 @property (nonatomic,readonly) NSInteger yearForWeekOfYear;
@@ -110,7 +110,7 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 // overridden to return EZDate
 - (id)dateByAddingTimeInterval:(NSTimeInterval)ti;
 
-// overridden to guarantee YYYY-MM-DD HH:MM:SS ±HHMM format
+// overridden to guarantee "yyyy-MM-dd HH:mm:ss Z" format
 - (NSString *)description;
 
 // date at next occurrence after the receiver, useful for setting alarms not in the past
@@ -142,7 +142,7 @@ typedef NS_OPTIONS(NSInteger, EZWeekdayMask) { EZSunday, EZMonday, EZTuesday, EZ
 - (NSString*)stringWithDateFormat:(NSString*)format;
 
 // get a nice-looking date or time string suitable for an email or RSS app
-// returns time if today, month an day if within the last year,
+// returns time if today, month and day if within the last year,
 // full date if in the future or more than a year ago
 - (NSString*)prettyString;
 
